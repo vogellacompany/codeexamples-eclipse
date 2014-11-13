@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Translations
+Bundle-SymbolicName: org.eclipse.swt.internal.nl1
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: org.eclipse.swt;bundle-version="3.103.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
