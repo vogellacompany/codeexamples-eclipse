@@ -8,6 +8,8 @@ import org.eclipse.e4.ui.workbench.modeling.EModelService;
 public class SavePerspectiveHandler {
 	@Execute
 	public void execute(EModelService modelService, MWindow window) {
+
+		// clone the currently active perspective
 		MPerspective activePerspective = modelService
 				.getActivePerspective(window);
 		modelService.cloneElement(activePerspective, window);

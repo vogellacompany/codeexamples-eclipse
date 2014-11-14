@@ -20,6 +20,8 @@ public class SwitchPerspectiveHandler {
 		List<MPerspective> perspectives = modelService.findElements(window,
 				null, MPerspective.class, null);
 
+		// as we only have two perspectives simply switch to the non active
+		// perspective.
 		for (MPerspective perspective : perspectives) {
 			if (!perspective.equals(activePerspective)) {
 				partService.switchPerspective(perspective);
