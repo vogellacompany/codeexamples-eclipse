@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_FstfcGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_FstfeWsgEeSnK-CHgGDtvQ">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_FstfcGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_FstfeWsgEeSnK-CHgGDtvQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_FstfcWsgEeSnK-CHgGDtvQ" label="WizardTranslation" width="500" height="400">
-    <children xsi:type="basic:PartStack" xmi:id="_FsuGimsgEeSnK-CHgGDtvQ">
-      <children xsi:type="basic:Part" xmi:id="_FsutkGsgEeSnK-CHgGDtvQ" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_mpFZAGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_m8rqcGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspective.main" label="Main Perspective">
+        <children xsi:type="basic:PartStack" xmi:id="_FsuGimsgEeSnK-CHgGDtvQ">
+          <children xsi:type="basic:Part" xmi:id="_FsutkGsgEeSnK-CHgGDtvQ" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_Eoc6UGwWEeSqHfYvWOYz-Q">
+          <children xsi:type="basic:Part" xmi:id="_Eoc6UWwWEeSqHfYvWOYz-Q" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_qSHVMGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspective.second" label="Second Perspective">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_7d-HwGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partsashcontainer.0">
+          <children xsi:type="basic:PartStack" xmi:id="_vEoB8GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_vVXzsGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.part.secondPerspectivePart" label="Second Perspective Part"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_9sw6kGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partstack.1">
+            <children xsi:type="basic:Part" xmi:id="_9_sdoGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.part.moveOrCloseMe" label="Move or close me" closeable="true"/>
+          </children>
+        </children>
+      </children>
     </children>
+    <mainMenu xmi:id="_4CIIcGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_5xemMGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.menu.window" label="Window">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_8C09wGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.0" command="__mG3QGwUEeSqHfYvWOYz-Q"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_spjRMGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.1" command="_DmwesGwUEeSqHfYvWOYz-Q"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_tsvMgGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.2" command="_GYFW0GwUEeSqHfYvWOYz-Q"/>
+      </children>
+    </mainMenu>
   </children>
+  <handlers xmi:id="_IniQ8GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handler.0" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.handlers.SavePerspectiveHandler" command="_DmwesGwUEeSqHfYvWOYz-Q"/>
+  <handlers xmi:id="_aCsgQGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handler.1" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.handlers.RestorePerspectiveHandler" command="_GYFW0GwUEeSqHfYvWOYz-Q"/>
+  <handlers xmi:id="_-h8EgGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handler.2" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.handlers.SwitchPerspectiveHandler" command="__mG3QGwUEeSqHfYvWOYz-Q"/>
   <bindingTables xmi:id="_FstffmsgEeSnK-CHgGDtvQ" bindingContext="_FstfeWsgEeSnK-CHgGDtvQ">
     <bindings xmi:id="_Fstff2sgEeSnK-CHgGDtvQ" keySequence="M1+Q"/>
     <bindings xmi:id="_FstfgmsgEeSnK-CHgGDtvQ" keySequence="M1+O"/>
@@ -15,6 +42,9 @@
     <children xmi:id="_FstfemsgEeSnK-CHgGDtvQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_Fstfe2sgEeSnK-CHgGDtvQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
+  <commands xmi:id="_DmwesGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.saveperspective" commandName="Save Perspective"/>
+  <commands xmi:id="_GYFW0GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.restoreperspective" commandName="Restore Perspective"/>
+  <commands xmi:id="__mG3QGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.switchPerspective" commandName="Switch Perspective"/>
   <addons xmi:id="_FstfcmsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_Fstfc2sgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_FstfdGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
