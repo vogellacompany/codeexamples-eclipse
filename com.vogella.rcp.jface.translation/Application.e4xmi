@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_FstfcGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ide.application" bindingContexts="_FstfeWsgEeSnK-CHgGDtvQ">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_FstfcWsgEeSnK-CHgGDtvQ" label="WizardTranslation" width="500" height="400">
-    <children xsi:type="advanced:PerspectiveStack" xmi:id="_mpFZAGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspectivestack.0">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_FstfcWsgEeSnK-CHgGDtvQ" label="WizardTranslation" width="640" height="480">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_mpFZAGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspectivestack.main">
       <children xsi:type="advanced:Perspective" xmi:id="_m8rqcGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspective.main" label="Main Perspective">
         <children xsi:type="basic:PartStack" xmi:id="_FsuGimsgEeSnK-CHgGDtvQ">
           <children xsi:type="basic:Part" xmi:id="_FsutkGsgEeSnK-CHgGDtvQ" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
@@ -23,7 +23,14 @@
     </children>
     <mainMenu xmi:id="_4CIIcGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.menu.0">
       <children xsi:type="menu:Menu" xmi:id="_5xemMGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.menu.window" label="Window">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_8C09wGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.0" command="__mG3QGwUEeSqHfYvWOYz-Q"/>
+        <children xsi:type="menu:Menu" xmi:id="_qxTSkHCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.menu.switchPerspective" label="Switch Perspective">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_8C09wGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.switchToMainPerspective" label="Switch to Main Perspective" command="__mG3QGwUEeSqHfYvWOYz-Q">
+            <parameters xmi:id="_jwNOYHCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.parameter.perspectiveid" name="com.vogella.rcp.jface.translation.commandparameter.perspectiveid" value="com.vogella.rcp.jface.translation.perspective.main"/>
+          </children>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_uZrHcHCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.handledmenuitem.switchToMainPerspective" label="Switch to Second Perspective" command="__mG3QGwUEeSqHfYvWOYz-Q">
+            <parameters xmi:id="_uZrHcXCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.parameter.perspectiveid" name="com.vogella.rcp.jface.translation.commandparameter.perspectiveid" value="com.vogella.rcp.jface.translation.perspective.second"/>
+          </children>
+        </children>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_spjRMGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.1" command="_DmwesGwUEeSqHfYvWOYz-Q"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_tsvMgGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.2" command="_GYFW0GwUEeSqHfYvWOYz-Q"/>
       </children>
@@ -44,7 +51,9 @@
   </rootContext>
   <commands xmi:id="_DmwesGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.saveperspective" commandName="Save Perspective"/>
   <commands xmi:id="_GYFW0GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.restoreperspective" commandName="Restore Perspective"/>
-  <commands xmi:id="__mG3QGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.switchPerspective" commandName="Switch Perspective"/>
+  <commands xmi:id="__mG3QGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.command.switchPerspective" commandName="Switch Perspective">
+    <parameters xmi:id="_C1PpMHCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.commandparameter.perspectiveid" name="Perspective Id" optional="false"/>
+  </commands>
   <addons xmi:id="_FstfcmsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_Fstfc2sgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_FstfdGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
