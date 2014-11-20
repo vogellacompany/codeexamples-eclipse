@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_4AFUkHBHEeSUOKH6e4Re4Q">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_onzBsHCkEeSa385pQWkASw" featurename="children" parentElementId="com.vogella.rcp.perspective.plugin.partstack.additional">
+    <elements xsi:type="basic:Part" xmi:id="_tDKZwHCkEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.addpart.part.partAddedByDifferentPlugin" contributionURI="bundleclass://com.vogella.rcp.perspective.addpart/com.vogella.rcp.perspective.addpart.parts.ContributePerspective" label="Part added by different plugin" closeable="true"/>
+  </fragments>
+</fragment:ModelFragments>

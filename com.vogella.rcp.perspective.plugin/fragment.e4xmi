@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_MjtmIHBHEeSUOKH6e4Re4Q">
+  <imports xsi:type="menu:Menu" xmi:id="_l09_oHCiEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.menu.switchPerspective"/>
+  <imports xsi:type="commands:Command" xmi:id="__4OpAHCpEeSa385pQWkASw" elementId="com.vogella.rcp.jface.translation.command.switchPerspective"/>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_O7OQEHBHEeSUOKH6e4Re4Q" featurename="children" parentElementId="com.vogella.rcp.jface.translation.perspectivestack.main">
+    <elements xsi:type="advanced:Perspective" xmi:id="_naJdEHBHEeSUOKH6e4Re4Q" elementId="com.vogella.rcp.perspective.plugin.perspective" label="Additional Perspective from plugin">
+      <children xsi:type="basic:PartStack" xmi:id="_eoGeYHCkEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.plugin.partstack.additional">
+        <children xsi:type="basic:Part" xmi:id="_fhF74HCkEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.plugin.part.partThatBelongsToAdditionalPerspective" contributionURI="bundleclass://com.vogella.rcp.perspective.plugin/com.vogella.rcp.perspective.plugin.parts.PerspectivePart" label="Part that belongs to additional perspective"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_Eo4OMHCiEeSa385pQWkASw" featurename="menuContributions" parentElementId="org.eclipse.e4.ide.application">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_i4j44HCiEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.plugin.menucontribution.0" parentId="com.vogella.rcp.jface.translation.menu.switchPerspective">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_9AtCQHCpEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.plugin.handledmenuitem." label="Switch to additional perspective from other plugin" command="__4OpAHCpEeSa385pQWkASw">
+        <parameters xmi:id="_HTwmcHCqEeSa385pQWkASw" elementId="com.vogella.rcp.perspective.plugin.perspective.parameter.perspectiveid" name="com.vogella.rcp.jface.translation.commandparameter.perspectiveid" value="com.vogella.rcp.perspective.plugin.perspective"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
