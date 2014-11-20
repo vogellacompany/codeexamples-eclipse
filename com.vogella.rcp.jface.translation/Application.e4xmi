@@ -12,7 +12,7 @@
       </children>
       <children xsi:type="advanced:Perspective" xmi:id="_qSHVMGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspective.second" label="Second Perspective">
         <children xsi:type="basic:PartSashContainer" xmi:id="_7d-HwGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partsashcontainer.0">
-          <children xsi:type="basic:PartStack" xmi:id="_vEoB8GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partstack.0">
+          <children xsi:type="basic:PartStack" xmi:id="_vEoB8GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partstack.secondperspective">
             <children xsi:type="basic:Part" xmi:id="_vVXzsGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.part.secondPerspectivePart" label="Second Perspective Part"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_9sw6kGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.partstack.1">
