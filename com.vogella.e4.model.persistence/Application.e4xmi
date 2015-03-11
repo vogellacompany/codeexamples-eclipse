@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_MgnwgMgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ide.application" bindingContexts="_MgnwicgYEeSkuodpcQ5AuA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_MgnwgcgYEeSkuodpcQ5AuA" label="com.vogella.e4.model.persistence" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_MgoXo8gYEeSkuodpcQ5AuA">
+      <children xsi:type="advanced:Perspective" xmi:id="_MgoXpMgYEeSkuodpcQ5AuA">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_MgoXpcgYEeSkuodpcQ5AuA">
+          <children xsi:type="basic:PartStack" xmi:id="_MgoXpsgYEeSkuodpcQ5AuA">
+            <children xsi:type="basic:Part" xmi:id="_MgplsMgYEeSkuodpcQ5AuA" contributionURI="bundleclass://com.vogella.e4.model.persistence/com.vogella.e4.model.persistence.parts.SamplePart" label="Sample Part"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_RijZUMgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_SD-EUMgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.part.simonScholz" label="Simon Scholz"/>
+            <children xsi:type="basic:Part" xmi:id="_UjHAQMgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.part.playground" label="Playground"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_MgoXnMgYEeSkuodpcQ5AuA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_MgoXncgYEeSkuodpcQ5AuA" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_MgoXnsgYEeSkuodpcQ5AuA" label="Open" iconURI="platform:/plugin/com.vogella.e4.model.persistence/icons/sample.png" command="_MgoXk8gYEeSkuodpcQ5AuA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_MgoXn8gYEeSkuodpcQ5AuA" label="Save" iconURI="platform:/plugin/com.vogella.e4.model.persistence/icons/save_edit.png" command="_MgoXlsgYEeSkuodpcQ5AuA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_MgoXoMgYEeSkuodpcQ5AuA" label="Quit" command="_MgnwjMgYEeSkuodpcQ5AuA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_MgoXocgYEeSkuodpcQ5AuA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_MgoXosgYEeSkuodpcQ5AuA" label="About" command="_MgoXmcgYEeSkuodpcQ5AuA"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_MgplscgYEeSkuodpcQ5AuA">
+      <children xsi:type="menu:ToolBar" xmi:id="_MgplssgYEeSkuodpcQ5AuA" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Mgpls8gYEeSkuodpcQ5AuA" iconURI="platform:/plugin/com.vogella.e4.model.persistence/icons/sample.png" command="_MgoXk8gYEeSkuodpcQ5AuA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_MgpltMgYEeSkuodpcQ5AuA" iconURI="platform:/plugin/com.vogella.e4.model.persistence/icons/save_edit.png" command="_MgoXlsgYEeSkuodpcQ5AuA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_MgoXkMgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.handler.quitCommand" contributionURI="bundleclass://com.vogella.e4.model.persistence/com.vogella.e4.model.persistence.handlers.QuitHandler" command="_MgnwjMgYEeSkuodpcQ5AuA"/>
+  <handlers xmi:id="_MgoXlMgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.handler.openCommand" contributionURI="bundleclass://com.vogella.e4.model.persistence/com.vogella.e4.model.persistence.handlers.OpenHandler" command="_MgoXk8gYEeSkuodpcQ5AuA"/>
+  <handlers xmi:id="_MgoXl8gYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.handler.saveCommand" contributionURI="bundleclass://com.vogella.e4.model.persistence/com.vogella.e4.model.persistence.handlers.SaveHandler" command="_MgoXlsgYEeSkuodpcQ5AuA"/>
+  <handlers xmi:id="_MgoXmsgYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.handler.aboutCommand" contributionURI="bundleclass://com.vogella.e4.model.persistence/com.vogella.e4.model.persistence.handlers.AboutHandler" command="_MgoXmcgYEeSkuodpcQ5AuA"/>
+  <bindingTables xmi:id="_MgoXkcgYEeSkuodpcQ5AuA" bindingContext="_MgnwicgYEeSkuodpcQ5AuA">
+    <bindings xmi:id="_MgoXksgYEeSkuodpcQ5AuA" keySequence="M1+Q" command="_MgnwjMgYEeSkuodpcQ5AuA"/>
+    <bindings xmi:id="_MgoXlcgYEeSkuodpcQ5AuA" keySequence="M1+O" command="_MgoXk8gYEeSkuodpcQ5AuA"/>
+    <bindings xmi:id="_MgoXmMgYEeSkuodpcQ5AuA" keySequence="M1+S" command="_MgoXlsgYEeSkuodpcQ5AuA"/>
+    <bindings xmi:id="_MgoXm8gYEeSkuodpcQ5AuA" keySequence="M1+A" command="_MgoXmcgYEeSkuodpcQ5AuA"/>
+  </bindingTables>
+  <rootContext xmi:id="_MgnwicgYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_MgnwisgYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_Mgnwi8gYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_MgnwjMgYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_MgoXk8gYEeSkuodpcQ5AuA" elementId="com.vogella.e4.model.persistence.open" commandName="openCommand"/>
+  <commands xmi:id="_MgoXlsgYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_MgoXmcgYEeSkuodpcQ5AuA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_MgnwgsgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_Mgnwg8gYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_MgnwhMgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_MgnwhcgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_MgnwhsgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_Mgnwh8gYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_MgnwiMgYEeSkuodpcQ5AuA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
