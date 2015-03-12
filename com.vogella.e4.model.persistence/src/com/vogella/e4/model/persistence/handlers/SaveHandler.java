@@ -24,15 +24,17 @@ public class SaveHandler {
 		E4XMIResourceFactory e4xmiResourceFactory = new E4XMIResourceFactory();
 		Resource resource = e4xmiResourceFactory.createResource(null);
 
-		// You must clone the perspective as snippet, otherwise the running application would break
+		// You must clone the perspective as snippet, otherwise the running
+		// application would break, because the saving process of the resource
+		// removes the element from the running application model
 		MUIElement clonedPerspective = modelService.cloneElement(activePerspective, window);
-		
+
 		// add the cloned model element to the resource so that it may be stored
 		resource.getContents().add((EObject) clonedPerspective);
-		
+
 		FileOutputStream outputStream = null;
 		try {
-			
+
 			// Use a stream to save the model element
 			outputStream = new FileOutputStream("/home/simon/simon.xmi");
 
