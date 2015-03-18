@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.vogella.rcp.editor.example.editor.TodoEditor"
+            default="false"
+            id="com.vogella.rcp.editor.example.editor.todoeditor"
+            name="Todo Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.vogella.rcp.editor.example.parts.TodoOverview"
+            id="com.vogella.rcp.editor.example.todooverview"
+            name="Todo Overview"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.vogella.rcp.editor.example.handler.CallEditor"
+            id="com.vogella.rcp.editor.example.openEditor"
+            name="Open Todo Editor">
+      </command>
+   </extension>
+
+</plugin>
