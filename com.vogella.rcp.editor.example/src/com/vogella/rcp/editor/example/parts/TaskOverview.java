@@ -9,11 +9,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.handlers.IHandlerService;
 import org.eclipse.ui.part.ViewPart;
 
-import com.vogella.rcp.editor.example.model.Todo;
-import com.vogella.rcp.editor.example.model.TodoService;
+import com.vogella.rcp.editor.example.model.Task;
+import com.vogella.rcp.editor.example.model.TaskService;
 
-public class TodoOverview extends ViewPart {
-	public static final String ID = "com.vogella.rcp.editor.example.todooverview";
+public class TaskOverview extends ViewPart {
+	public static final String ID = "com.vogella.rcp.editor.example.taskoverview";
 
 	private ListViewer viewer;
 
@@ -24,11 +24,11 @@ public class TodoOverview extends ViewPart {
 		viewer.setLabelProvider(new LabelProvider() {
 			@Override
 			public String getText(Object element) {
-				Todo p = (Todo) element;
+				Task p = (Task) element;
 				return p.getSummary();
 			};
 		});
-		viewer.setInput(TodoService.getInstance().getPersons());
+		viewer.setInput(TaskService.getInstance().getTasks());
 		getSite().setSelectionProvider(viewer);
 		hookDoubleClickCommand();
 

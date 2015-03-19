@@ -2,9 +2,11 @@ package com.vogella.rcp.editor.example.model;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-public class Todo {
+public class Task {
 	private PropertyChangeSupport changes = new PropertyChangeSupport(this);
 
 	public static final String FIELD_ID = "id";
@@ -12,21 +14,20 @@ public class Todo {
 	public static final String FIELD_DESCRIPTION = "description";
 	public static final String FIELD_DONE = "done";
 	public static final String FIELD_DUEDATE = "dueDate";
+	public static final String FIELD_DEPENDENTS = "dependents";
 
 	private long id;
 	private String summary;
 	private String description;
 	private boolean done;
 	private Date dueDate;
+	private List<Long> dependents = new ArrayList<>();
 
-	public Todo() {
-	}
-
-	public Todo(long i) {
+	public Task(long i) {
 		id = i;
 	}
 
-	public Todo(long i, String summary, String description, boolean b, Date date) {
+	public Task(long i, String summary, String description, boolean b, Date date) {
 		this.id = i;
 		this.summary = summary;
 		this.description = description;
@@ -69,6 +70,14 @@ public class Todo {
 	public void setDueDate(Date dueDate) {
 		changes.firePropertyChange(FIELD_DUEDATE, this.dueDate, this.dueDate = dueDate);
 	}
+	
+	public List<Long> getDependentTasks() {
+		return dependents;
+	}
+	
+	public void setDependentTasks(List<Long> dependents) {
+		this.dependents = dependents;
+	}
 
 	@Override
 	public int hashCode() {
@@ -86,7 +95,7 @@ public class Todo {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Todo other = (Todo) obj;
+		Task other = (Task) obj;
 		if (id != other.id)
 			return false;
 		return true;
@@ -97,8 +106,8 @@ public class Todo {
 		return "Todo [id=" + id + ", summary=" + summary + "]";
 	}
 
-	public Todo copy() {
-		return new Todo(id, summary, description, done, dueDate);
+	public Task copy() {
+		return new Task(id, summary, description, done, dueDate);
 	}
 
 	public void addPropertyChangeListener(PropertyChangeListener l) {

@@ -10,15 +10,14 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import com.vogella.rcp.editor.example.editor.TodoEditor;
-import com.vogella.rcp.editor.example.editor.TodoEditorInput;
-import com.vogella.rcp.editor.example.model.Todo;
+import com.vogella.rcp.editor.example.editor.TaskEditor;
+import com.vogella.rcp.editor.example.editor.TaskEditorInput;
+import com.vogella.rcp.editor.example.model.Task;
 
 public class CallEditor extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		System.out.println("called");
 		// get the page
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindow(event);
 		IWorkbenchPage page = window.getActivePage();
@@ -28,10 +27,10 @@ public class CallEditor extends AbstractHandler {
 			Object obj = ((IStructuredSelection) selection).getFirstElement();
 			// if we had a selection lets open the editor
 			if (obj != null) {
-				Todo todo = (Todo) obj;
-				TodoEditorInput input = new TodoEditorInput(todo.getId());
+				Task todo = (Task) obj;
+				TaskEditorInput input = new TaskEditorInput(todo.getId());
 				try {
-					page.openEditor(input, TodoEditor.ID);
+					page.openEditor(input, TaskEditor.ID);
 				} catch (PartInitException e) {
 					throw new RuntimeException(e);
 				}

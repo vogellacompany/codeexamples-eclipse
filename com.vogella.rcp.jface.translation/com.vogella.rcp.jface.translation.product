@@ -3,7 +3,6 @@
 
 <product name="WizardTranslation" uid="jface_translation" id="com.vogella.rcp.jface.translation.jface_translation" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -17,7 +16,6 @@
 
    <windowImages/>
 
-
    <launcher>
       <solaris/>
       <win useIco="false">
@@ -25,10 +23,8 @@
       </win>
    </launcher>
 
-
    <vm>
    </vm>
-
 
    <plugins>
       <plugin id="com.eclipsesource.jaxrs.jersey-all"/>
@@ -71,7 +67,7 @@
    </plugins>
 
    <features>
-      <feature id="org.eclipse.e4.rcp" version="1.3.100.v20140909-1633"/>
+      <feature id="org.eclipse.e4.rcp"/>
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
       <feature id="com.vogella.rcp.jface.translation.feature" version="1.0.0.qualifier"/>

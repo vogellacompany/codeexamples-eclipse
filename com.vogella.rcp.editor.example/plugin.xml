@@ -4,18 +4,25 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="com.vogella.rcp.editor.example.editor.TodoEditor"
+            class="com.vogella.rcp.editor.example.editor.TaskEditor"
             default="false"
-            id="com.vogella.rcp.editor.example.editor.todoeditor"
-            name="Todo Editor">
+            id="com.vogella.rcp.editor.example.editor.taskeditor"
+            name="Task Editor">
+      </editor>
+      <editor
+            class="com.vogella.rcp.editor.example.editor.text.TaskTextEditor"
+            default="false"
+            extensions="task"
+            id="com.vogella.rcp.editor.example.editor.tasktexteditor"
+            name="Task Text Editor">
       </editor>
    </extension>
    <extension
          point="org.eclipse.ui.views">
       <view
-            class="com.vogella.rcp.editor.example.parts.TodoOverview"
-            id="com.vogella.rcp.editor.example.todooverview"
-            name="Todo Overview"
+            class="com.vogella.rcp.editor.example.parts.TaskOverview"
+            id="com.vogella.rcp.editor.example.taskoverview"
+            name="Task Overview"
             restorable="true">
       </view>
    </extension>
@@ -24,7 +31,7 @@
       <command
             defaultHandler="com.vogella.rcp.editor.example.handler.CallEditor"
             id="com.vogella.rcp.editor.example.openEditor"
-            name="Open Todo Editor">
+            name="Open Task Editor">
       </command>
    </extension>
 

@@ -4,11 +4,11 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IPersistableElement;
 
-public class TodoEditorInput implements IEditorInput {
+public class TaskEditorInput implements IEditorInput {
 
 	private final long id;
 
-	public TodoEditorInput(long id) {
+	public TaskEditorInput(long id) {
 		this.id = id;
 	}
 
@@ -38,7 +38,7 @@ public class TodoEditorInput implements IEditorInput {
 
 	@Override
 	public String getToolTipText() {
-		return "Displays a person";
+		return "Displays a task";
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class TodoEditorInput implements IEditorInput {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TodoEditorInput other = (TodoEditorInput) obj;
+		TaskEditorInput other = (TaskEditorInput) obj;
 		if (id != other.id)
 			return false;
 		return true;
