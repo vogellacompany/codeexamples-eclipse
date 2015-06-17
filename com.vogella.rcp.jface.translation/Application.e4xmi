@@ -5,6 +5,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_m8rqcGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.perspective.main" label="Main Perspective">
         <children xsi:type="basic:PartStack" xmi:id="_FsuGimsgEeSnK-CHgGDtvQ">
           <children xsi:type="basic:Part" xmi:id="_FsutkGsgEeSnK-CHgGDtvQ" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
+          <children xsi:type="advanced:Placeholder" xmi:id="_o-FnQBTmEeWdv4T-UQiqZg" elementId="com.vogella.rcp.jface.translation.part.placeholder" ref="_NsPJABTNEeWdv4T-UQiqZg"/>
         </children>
         <children xsi:type="basic:PartStack" xmi:id="_Eoc6UGwWEeSqHfYvWOYz-Q">
           <children xsi:type="basic:Part" xmi:id="_Eoc6UWwWEeSqHfYvWOYz-Q" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SamplePart" label="Sample Part"/>
@@ -35,6 +36,7 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_tsvMgGwVEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handledmenuitem.2" command="_GYFW0GwUEeSqHfYvWOYz-Q"/>
       </children>
     </mainMenu>
+    <sharedElements xsi:type="basic:Part" xmi:id="_NsPJABTNEeWdv4T-UQiqZg" elementId="com.vogella.rcp.jface.translation.part.placeholder" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.parts.SharedPart" label="Placeholder" closeable="true"/>
   </children>
   <handlers xmi:id="_IniQ8GwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handler.0" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.handlers.SavePerspectiveHandler" command="_DmwesGwUEeSqHfYvWOYz-Q"/>
   <handlers xmi:id="_aCsgQGwUEeSqHfYvWOYz-Q" elementId="com.vogella.rcp.jface.translation.handler.1" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.handlers.RestorePerspectiveHandler" command="_GYFW0GwUEeSqHfYvWOYz-Q"/>
@@ -61,4 +63,5 @@
   <addons xmi:id="_FstfdmsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_Fstfd2sgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_FstfeGsgEeSnK-CHgGDtvQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_ktPosBTcEeWdv4T-UQiqZg" elementId="com.vogella.rcp.jface.translation.addon.storeinitialperspective" contributionURI="bundleclass://com.vogella.rcp.jface.translation/wizardtranslation.addon.InitialPerspectiveStorageAddon"/>
 </application:Application>
