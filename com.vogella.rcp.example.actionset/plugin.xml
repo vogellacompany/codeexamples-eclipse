@@ -62,21 +62,21 @@
          point="org.eclipse.ui.actionSets">
       <actionSet
             id="testing.actionSet"
-            label="Sample Action Set"
+            label="Quick Access search"
             visible="true">
-         <menu
-               id="sampleMenu"
-               label="Sample &amp;Menu">
-            <separator
-                  name="sampleGroup">
-            </separator>
-         </menu>
          <action
-               class="testing.actions.SampleAction"
-               icon="icons/sample.gif"
+               class="testing.actions.TriggerQuickAccessAction"
                id="testing.actions.SampleAction"
                label="&amp;Sample Action"
-               menubarPath="sampleMenu/sampleGroup"
+               menubarPath="org.eclipse.search.menu/extraSearchGroup"
+               toolbarPath="sampleGroup"
+               tooltip="Hello, Eclipse world">
+         </action>
+         <action
+               class="testing.actions.TriggerQuickAccessAction"
+               id="testing.actions.SampleAction2"
+               label="Find Commands..."
+               menubarPath="org.eclipse.search.menu/extraSearchGroup"
                toolbarPath="sampleGroup"
                tooltip="Hello, Eclipse world">
          </action>
