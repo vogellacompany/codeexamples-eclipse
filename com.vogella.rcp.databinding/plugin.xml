@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="com.vogella.rcp.databinding"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.vogella.rcp.databinding/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="com.vogella.rcp.databinding">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
