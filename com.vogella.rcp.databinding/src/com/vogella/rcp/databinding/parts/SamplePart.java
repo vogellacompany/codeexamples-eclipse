@@ -7,6 +7,7 @@ import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.databinding.validation.ValidationStatus;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
@@ -38,18 +39,29 @@ public class SamplePart {
 		DataBindingContext dbc = new DataBindingContext();
 
 		// define converters
-		IConverter convertToStringArray =
-				IConverter.create(String.class, String[].class, (o1) -> ((String) o1).split(","));
-		IConverter convertToString =
-				IConverter.create(String[].class, String.class, (o1) -> convert((String[])o1));;
+		IConverter convertToStringArray = IConverter.create(String.class, String[].class,
+				(o1) -> ((String) o1).split(","));
+		IConverter convertToString = IConverter.create(String[].class, String.class, (o1) -> convert((String[]) o1));
+		;
 
 		// create the observables, which should be bound
-		IObservableValue<Text> programmingSkillsTarget = WidgetProperties.text(SWT.Modify).observe(programmingSkillsText);
+		IObservableValue<Text> programmingSkillsTarget = WidgetProperties.text(SWT.Modify)
+				.observe(programmingSkillsText);
 		IObservableValue<Person> programmingSkillsModel = BeanProperties.value("programmingSkills").observe(person);
+
+		UpdateValueStrategy updateStrategy = UpdateValueStrategy.create(convertToStringArray);
+		updateStrategy.setAfterGetValidator((o1) -> {
+			String s = (String) o1;
+			if (!s.contains("Perl")) {
+				return ValidationStatus.ok();
+			}
+			return ValidationStatus.error("Perl is not a programming language");
+
+		});
 
 		// bind observables together with the appropriate UpdateValueStrategies
 		dbc.bindValue(programmingSkillsTarget, programmingSkillsModel,
-				UpdateValueStrategy.create(convertToStringArray),
+				updateStrategy,
 				UpdateValueStrategy.create(convertToString));
 
 		// button to check the data model
