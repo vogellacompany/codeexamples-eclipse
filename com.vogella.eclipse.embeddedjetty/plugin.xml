@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="com.vogella.eclipse.embeddedjetty"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.vogella.eclipse.embeddedjetty/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="com.vogella.eclipse.embeddedjetty">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
