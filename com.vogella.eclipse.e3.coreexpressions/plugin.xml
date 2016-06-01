@@ -26,6 +26,12 @@
             class="simplee3app.View"
             id="SimpleE3App.view">
       </view>
+      <view
+            class="simplee3app.View2"
+            id="com.vogella.eclipse.e3.coreexpression.view1"
+            name="Parts2"
+            restorable="true">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
@@ -37,6 +43,13 @@
                relative="org.eclipse.ui.editorss"
                relationship="left"
                id="SimpleE3App.view">
+         </view>
+         <view
+               id="com.vogella.eclipse.e3.coreexpression.view1"
+               minimized="false"
+               relationship="right"
+               relative="org.eclipse.ui.editorss"
+               standalone="false">
          </view>
       </perspectiveExtension>
    </extension>
@@ -76,12 +89,6 @@
                   commandId="org.eclipse.ui.file.exit"
                   label="Exit visible"
                   style="push">
-               <visibleWhen
-                     checkEnabled="false">
-                  <reference
-                        definitionId="oneElementSelected">
-                  </reference>
-               </visibleWhen>
             </command>
             <command
                   commandId="org.eclipse.ui.file.exit"
@@ -94,8 +101,54 @@
                   </reference>
                </visibleWhen>
             </command>
+            <command
+                  commandId="com.vogella.eclipse.e3.coreexpression.command5"
+                  label="Source Provider"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="com.example.someVariable">
+                     <equals
+                           value="someValue2">
+                     </equals>
+                  </with>
+               </visibleWhen>
+            </command>
          </toolbar>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.services">
+      <sourceProvider
+            provider="com.vogella.eclipse.e3.coreexpression.AbstractSourceProvider">
+         <variable
+               name="mysources"
+               priorityLevel="workbench">
+         </variable>
+      </sourceProvider>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.vogella.eclipse.e3.coreexpression.PropertyTester2"
+            id="lars"
+            namespace="com.vogella"
+            properties="exampleproperty"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="isPerspectiveInstance">
+         <with
+               variable="org.eclipse.e4.ui.model.application.ui.advanced.MPerspective">
+            <instanceof
+                  value="org.eclipse.e4.ui.model.application.ui.advanced.MPerspective">
+            </instanceof>
+         </with>
+      </definition>
    </extension>
 
 </plugin>
