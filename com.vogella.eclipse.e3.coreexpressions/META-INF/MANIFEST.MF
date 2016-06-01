@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SimpleE3App
+Bundle-SymbolicName: com.vogella.eclipse.e3.coreexpression;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.expressions;bundle-version="3.5.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
