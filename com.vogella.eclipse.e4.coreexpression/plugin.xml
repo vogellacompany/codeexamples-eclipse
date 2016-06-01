@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="SimpleE4App"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/com.vogella.eclipse.e4.coreexpression/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="SimpleE4App">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="SimpleE4App.definition.never">
+         <with
+               variable="activeEditorId">
+            <equals
+                  value="asdf">
+            </equals>
+         </with>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="myperspectiveChecker">
+         <with
+               variable="activeWorkbenchWindow.activePerspective">
+            <equals
+                  value="myperspective">
+            </equals>
+         </with>
+      </definition>
+   </extension>
+
+</plugin>

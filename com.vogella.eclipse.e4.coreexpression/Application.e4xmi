@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_cgl5ICNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ide.application" bindingContexts="_cgl5KSNTEea7nKf04fzzlA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_cgl5ISNTEea7nKf04fzzlA" label="SimpleE4App" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_cgmgRCNTEea7nKf04fzzlA">
+      <children xsi:type="advanced:Perspective" xmi:id="_cgmgRSNTEea7nKf04fzzlA" elementId="myperspective">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_cgmgRiNTEea7nKf04fzzlA">
+          <children xsi:type="basic:PartStack" xmi:id="_cgnHQCNTEea7nKf04fzzlA">
+            <children xsi:type="basic:Part" xmi:id="_cgnHQSNTEea7nKf04fzzlA" contributionURI="bundleclass://com.vogella.eclipse.e4.coreexpression/SimpleE4App.parts.SamplePart" label="Sample Part">
+              <toolbar xmi:id="_mNus0CNTEea7nKf04fzzlA" elementId="simplee4app.toolbar.0">
+                <children xsi:type="menu:HandledToolItem" xmi:id="_moqVUCNTEea7nKf04fzzlA" elementId="simplee4app.handledtoolitem.0" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/sample.png" command="_cgmgNCNTEea7nKf04fzzlA">
+                  <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_a-4ZUCNUEea7nKf04fzzlA" coreExpressionId="SimpleE4App.definition.never"/>
+                </children>
+              </toolbar>
+            </children>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_cgmgPSNTEea7nKf04fzzlA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_cgmgPiNTEea7nKf04fzzlA" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgPyNTEea7nKf04fzzlA" label="Open" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/sample.png" command="_cgmgNCNTEea7nKf04fzzlA">
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_2Te9gCNVEea7nKf04fzzlA" coreExpressionId="SimpleE4App.definition.never"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQCNTEea7nKf04fzzlA" label="Save" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/save_edit.png" command="_cgmgNyNTEea7nKf04fzzlA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQSNTEea7nKf04fzzlA" label="Quit" command="_cgmgMCNTEea7nKf04fzzlA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_cgmgQiNTEea7nKf04fzzlA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQyNTEea7nKf04fzzlA" label="About" command="_cgmgOiNTEea7nKf04fzzlA"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_cgnHQiNTEea7nKf04fzzlA">
+      <children xsi:type="menu:ToolBar" xmi:id="_cgnHQyNTEea7nKf04fzzlA" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_cgnHRCNTEea7nKf04fzzlA" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/sample.png" command="_cgmgNCNTEea7nKf04fzzlA">
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_-39gACNVEea7nKf04fzzlA" coreExpressionId="SimpleE4App.definition.never"/>
+        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_cgnHRSNTEea7nKf04fzzlA" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/save_edit.png" command="_cgmgNyNTEea7nKf04fzzlA"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_IZybkCNWEea7nKf04fzzlA" elementId="simplee4app.directtoolitem.direct" label="Direct">
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_L5dncCNWEea7nKf04fzzlA" coreExpressionId="com.subshell.sophora.eclipse.never"/>
+        </children>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_cgmgMSNTEea7nKf04fzzlA" elementId="SimpleE4App.handler.quitCommand" contributionURI="bundleclass://com.vogella.eclipse.e4.coreexpression/SimpleE4App.handlers.QuitHandler" command="_cgmgMCNTEea7nKf04fzzlA"/>
+  <handlers xmi:id="_cgmgNSNTEea7nKf04fzzlA" elementId="SimpleE4App.handler.openCommand" contributionURI="bundleclass://com.vogella.eclipse.e4.coreexpression/SimpleE4App.handlers.OpenHandler" command="_cgmgNCNTEea7nKf04fzzlA"/>
+  <handlers xmi:id="_cgmgOCNTEea7nKf04fzzlA" elementId="SimpleE4App.handler.saveCommand" contributionURI="bundleclass://com.vogella.eclipse.e4.coreexpression/SimpleE4App.handlers.SaveHandler" command="_cgmgNyNTEea7nKf04fzzlA"/>
+  <handlers xmi:id="_cgmgOyNTEea7nKf04fzzlA" elementId="SimpleE4App.handler.aboutCommand" contributionURI="bundleclass://com.vogella.eclipse.e4.coreexpression/SimpleE4App.handlers.AboutHandler" command="_cgmgOiNTEea7nKf04fzzlA"/>
+  <bindingTables xmi:id="_cgmgMiNTEea7nKf04fzzlA" bindingContext="_cgl5KSNTEea7nKf04fzzlA">
+    <bindings xmi:id="_cgmgMyNTEea7nKf04fzzlA" keySequence="M1+Q" command="_cgmgMCNTEea7nKf04fzzlA"/>
+    <bindings xmi:id="_cgmgNiNTEea7nKf04fzzlA" keySequence="M1+O" command="_cgmgNCNTEea7nKf04fzzlA"/>
+    <bindings xmi:id="_cgmgOSNTEea7nKf04fzzlA" keySequence="M1+S" command="_cgmgNyNTEea7nKf04fzzlA"/>
+    <bindings xmi:id="_cgmgPCNTEea7nKf04fzzlA" keySequence="M1+A" command="_cgmgOiNTEea7nKf04fzzlA"/>
+  </bindingTables>
+  <rootContext xmi:id="_cgl5KSNTEea7nKf04fzzlA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_cgl5KiNTEea7nKf04fzzlA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_cgl5KyNTEea7nKf04fzzlA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <toolBarContributions xmi:id="_coBUcCgBEealKIVimGfmuA" elementId="toolbarcontribution1" parentId="toolbar:org.eclipse.ui.main.toolbar">
+    <children xsi:type="menu:HandledToolItem" xmi:id="_eCvmACgBEealKIVimGfmuA" elementId="simplee4app.handledtoolitem.toolbarcontribution" label="Toolbar Contribution Hidden" command="_cgmgMCNTEea7nKf04fzzlA">
+      <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_qe2hYCgBEealKIVimGfmuA" coreExpressionId="SimpleE4App.definition.never"/>
+    </children>
+    <children xsi:type="menu:HandledToolItem" xmi:id="_wQGuUCgBEealKIVimGfmuA" elementId="simplee4app.handledtoolitem.toolbarcontribution" label="Toolbar Contribution Visible" command="_cgmgMCNTEea7nKf04fzzlA">
+      <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_HV4PsCgFEealKIVimGfmuA" coreExpressionId="myperspectiveChecker"/>
+    </children>
+  </toolBarContributions>
+  <commands xmi:id="_cgmgMCNTEea7nKf04fzzlA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_cgmgNCNTEea7nKf04fzzlA" elementId="SimpleE4App.open" commandName="openCommand"/>
+  <commands xmi:id="_cgmgNyNTEea7nKf04fzzlA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_cgmgOiNTEea7nKf04fzzlA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_cgl5IiNTEea7nKf04fzzlA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_cgl5IyNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_cgl5JCNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_cgl5JSNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_cgl5JiNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_cgl5JyNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_cgl5KCNTEea7nKf04fzzlA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
