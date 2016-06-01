@@ -59,8 +59,37 @@
             id="oneElementSelected">
          <with
                variable="selection">
+            <count
+                  value="1">
+            </count>
          </with>
       </definition>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.vogella.eclipse.e3.coreexpression.toolbar4">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit visible"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit hidden"
+                  style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <reference
+                        definitionId="oneElementSelected">
+                  </reference>
+               </visibleWhen>
+            </command>
+         </toolbar>
+      </menuContribution>
    </extension>
 
 </plugin>
