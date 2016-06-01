@@ -76,6 +76,12 @@
                   commandId="org.eclipse.ui.file.exit"
                   label="Exit visible"
                   style="push">
+               <visibleWhen
+                     checkEnabled="false">
+                  <reference
+                        definitionId="oneElementSelected">
+                  </reference>
+               </visibleWhen>
             </command>
             <command
                   commandId="org.eclipse.ui.file.exit"
