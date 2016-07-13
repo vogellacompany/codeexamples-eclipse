@@ -17,6 +17,9 @@ import javax.inject.Inject;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
 import org.eclipse.e4.ui.model.application.ui.MDirtyable;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -34,6 +37,8 @@ public class SamplePart {
 	@Inject
 	private MDirtyable dirty;
 
+	@Inject
+	ESelectionService selectionService;
 	@PostConstruct
 	public void createComposite(Composite parent) {
 		parent.setLayout(new GridLayout(1, false));
@@ -56,6 +61,13 @@ public class SamplePart {
 		tableViewer.add("Sample item 4");
 		tableViewer.add("Sample item 5");
 		tableViewer.getTable().setLayoutData(new GridData(GridData.FILL_BOTH));
+		tableViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			
+			@Override
+			public void selectionChanged(SelectionChangedEvent event) {
+				selectionService.setSelection("Hello");
+			}
+		});
 	}
 
 	@Focus

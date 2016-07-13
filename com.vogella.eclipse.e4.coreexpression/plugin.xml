@@ -2,22 +2,6 @@
 <plugin>
 
    <extension
-         id="product"
-         point="org.eclipse.core.runtime.products">
-      <product
-            name="SimpleE4App"
-            application="org.eclipse.e4.ui.workbench.swt.E4Application">
-         <property
-               name="applicationCSS"
-               value="platform:/plugin/com.vogella.eclipse.e4.coreexpression/css/default.css">
-         </property>
-         <property
-               name="appName"
-               value="SimpleE4App">
-         </property>
-      </product>
-   </extension>
-   <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
             id="SimpleE4App.definition.never">
@@ -41,5 +25,48 @@
          </with>
       </definition>
    </extension>
-
+   
+   <extension
+      point="org.eclipse.core.expressions.definitions">
+	<definition
+            id="typeMustBeString">
+      <with variable="org.eclipse.ui.selection">
+  <instanceof
+        value="java.lang.String">
+  </instanceof>
+      </with>
+	</definition>
+</extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="SimpleE4App">
+         <property
+               name="appName"
+               value="SimpleE4App">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.vogella.eclipse.e4.coreexpression.PropertyTester3"
+            id="lars"
+            namespace="com.vogella"
+            properties="isEnabled"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="checkPerspective">
+         <test
+               forcePluginActivation="true"
+               property="com.vogella.isEnabled">
+         </test>
+      </definition>
+   </extension>
 </plugin>

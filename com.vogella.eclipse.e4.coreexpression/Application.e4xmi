@@ -12,6 +12,7 @@
                 </children>
               </toolbar>
             </children>
+            <children xsi:type="basic:Part" xmi:id="_NOn50CgHEealKIVimGfmuA" elementId="com.vogella.eclipse.e4.coreexpression.part.0" contributionURI="bundleclass://org.eclipse.e4.tools.context.spy/org.eclipse.e4.tools.context.spy.ContextSpyPart"/>
           </children>
         </children>
       </children>
@@ -21,7 +22,9 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgPyNTEea7nKf04fzzlA" label="Open" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/sample.png" command="_cgmgNCNTEea7nKf04fzzlA">
           <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_2Te9gCNVEea7nKf04fzzlA" coreExpressionId="SimpleE4App.definition.never"/>
         </children>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQCNTEea7nKf04fzzlA" label="Save" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/save_edit.png" command="_cgmgNyNTEea7nKf04fzzlA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQCNTEea7nKf04fzzlA" label="Save" iconURI="platform:/plugin/com.vogella.eclipse.e4.coreexpression/icons/save_edit.png" command="_cgmgNyNTEea7nKf04fzzlA">
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_fIBmgCgWEealKIVimGfmuA" coreExpressionId="checkPerspective"/>
+        </children>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_cgmgQSNTEea7nKf04fzzlA" label="Quit" command="_cgmgMCNTEea7nKf04fzzlA"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_cgmgQiNTEea7nKf04fzzlA" label="Help">
@@ -59,7 +62,10 @@
       <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_qe2hYCgBEealKIVimGfmuA" coreExpressionId="SimpleE4App.definition.never"/>
     </children>
     <children xsi:type="menu:HandledToolItem" xmi:id="_wQGuUCgBEealKIVimGfmuA" elementId="simplee4app.handledtoolitem.toolbarcontribution" label="Toolbar Contribution Visible" command="_cgmgMCNTEea7nKf04fzzlA">
-      <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_HV4PsCgFEealKIVimGfmuA" coreExpressionId="myperspectiveChecker"/>
+      <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_HV4PsCgFEealKIVimGfmuA" coreExpressionId="typeMustBeString"/>
+    </children>
+    <children xsi:type="menu:HandledToolItem" xmi:id="_oKwLQCgWEealKIVimGfmuA" elementId="com.vogella.eclipse.e4.coreexpression.handledtoolitem.propertytester" label="Property Tester" command="_cgmgNCNTEea7nKf04fzzlA">
+      <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_E0ImgCgXEealKIVimGfmuA" coreExpressionId="checkPerspective"/>
     </children>
   </toolBarContributions>
   <commands xmi:id="_cgmgMCNTEea7nKf04fzzlA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>

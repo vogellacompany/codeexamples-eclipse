@@ -13,12 +13,17 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
 import org.eclipse.e4.ui.model.application.ui.MDirtyable;
+import org.eclipse.jface.resource.FontDescriptor;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.resource.LocalResourceManager;
+import org.eclipse.jface.resource.ResourceManager;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -41,15 +46,27 @@ public class SamplePart {
 	
 	@Inject Shell shell;
 
-	@PostConstruct
-	public void createComposite(Composite parent) {
-		parent.setLayout(new GridLayout(1, false));
+	private void addFonts(Display display) {
+
 		Bundle bundle = FrameworkUtil.getBundle(getClass());
-		final String pathString = "fonts/Roboto-Regular.ttf";
+		final String pathString = "fonts/Roboto-ThinItalic.ttf";
 		Path path = new Path(pathString);
 		URL url = FileLocator.find(bundle, path, Collections.EMPTY_MAP);
 		final boolean isFontLoaded = display.loadFont(url.toExternalForm());
-		Font font = new Font(display, "Roboto-Regular.ttf", 12, SWT.NORMAL);
+		if (!isFontLoaded) {
+			new RuntimeException("Did not load font");
+		}
+	}
+	@PostConstruct
+	public void createComposite(Composite parent) {
+		addFonts(display);
+		
+		ResourceManager resManager = 
+				  new LocalResourceManager(JFaceResources.getResources(), parent);
+		FontDescriptor fontDescriptor = FontDescriptor.createFrom("Roboto-ThinItalic", 11, SWT.NORMAL);
+
+		Font font = resManager.createFont(fontDescriptor);
+		parent.setLayout(new GridLayout(1, false));
 		
 		txtInput = new Text(parent, SWT.BORDER);
 		txtInput.setFont(font);
@@ -60,6 +77,7 @@ public class SamplePart {
 				dirty.setDirty(true);
 			}
 		});
+		FontData fd = txtInput.getFont().getFontData()[0];
 		txtInput.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 		
 		Text txtInput2 = new Text(parent, SWT.BORDER);
@@ -70,9 +88,6 @@ public class SamplePart {
 		button.setFont(font);
 		button.setText("Press me");
 		
-		GridData gd = new GridData ();
-		gd.widthHint = 50;
-		button.setLayoutData (gd);
 		
 		
 		Button button2 = new Button(parent, SWT.PUSH);

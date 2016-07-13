@@ -121,9 +121,10 @@
                   style="push">
                <visibleWhen
                      checkEnabled="false">
-                  <reference
-                        definitionId="isPerspectiveInstance">
-                  </reference>
+                  <test
+                        forcePluginActivation="true"
+                        property="com.vogella.isEnabled">
+                  </test>
                </visibleWhen>
             </command>
          </toolbar>
@@ -145,7 +146,7 @@
             class="com.vogella.eclipse.e3.coreexpression.PropertyTester2"
             id="lars"
             namespace="com.vogella"
-            properties="exampleproperty"
+            properties="isEnabled"
             type="java.lang.Object">
       </propertyTester>
    </extension>
