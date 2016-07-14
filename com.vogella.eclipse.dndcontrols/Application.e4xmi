@@ -5,8 +5,14 @@
       <children xsi:type="advanced:Perspective" xmi:id="_6wlLkcgZEeSyMNYR5xypkQ" elementId="com.vogella.eclipse.dndcontrols.perspective.sample">
         <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.vogella.eclipse.dndcontrols.partsashcontainer.sample">
           <children xsi:type="basic:PartSashContainer" xmi:id="_IKPXEEjOEea_1OTObn1rMg" elementId="com.vogella.eclipse.dndcontrols.partsashcontainer.0">
-            <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.vogella.eclipse.dndcontrols.part.sample" contributionURI="bundleclass://com.vogella.eclipse.dndcontrols/com.vogella.eclipse.dndcontrols.View1" label="Sample Part"/>
+            <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.vogella.eclipse.dndcontrols.part.sample" contributionURI="bundleclass://com.vogella.eclipse.dndcontrols/com.vogella.eclipse.dndcontrols.parts.View1" label="Sample Part"/>
             <children xsi:type="basic:Part" xmi:id="_7mwoYEjNEea_1OTObn1rMg" elementId="com.vogella.eclipse.dndcontrols.part.view2" contributionURI="bundleclass://com.vogella.eclipse.dndcontrols/com.vogella.eclipse.dndcontrols.parts.View2" label="View2"/>
+            <children xsi:type="basic:PartStack" xmi:id="_dLox0EkREeaJgIWjldG_mg" elementId="com.vogella.eclipse.dndcontrols.partstack.1">
+              <children xsi:type="basic:Part" xmi:id="_eRaHEEkREeaJgIWjldG_mg" elementId="com.vogella.eclipse.dndcontrols.part.group" contributionURI="bundleclass://com.vogella.eclipse.dndcontrols/com.vogella.eclipse.dndcontrols.parts.GroupPart" label="Group"/>
+            </children>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_95XpwEkFEeaJgIWjldG_mg" elementId="com.vogella.eclipse.dndcontrols.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_pgg6QEkFEeaJgIWjldG_mg" elementId="com.vogella.eclipse.dndcontrols.part.formspart" contributionURI="bundleclass://com.vogella.eclipse.dndcontrols/com.vogella.eclipse.dndcontrols.parts.FormsPart" label="Forms Part"/>
           </children>
         </children>
       </children>

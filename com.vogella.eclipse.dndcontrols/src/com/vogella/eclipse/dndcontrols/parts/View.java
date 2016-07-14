@@ -74,6 +74,9 @@ public abstract class View {
 					return;
 				}
 
+				if  (droppedObj instanceof Label) {
+					System.out.println("Dropped");
+				}
 				// handle the drop
 				if (droppedObj instanceof Label) {
 					Label droppedLabel = (Label) droppedObj;
@@ -88,8 +91,7 @@ public abstract class View {
 				// request a layout pass
 				oldParent.requestLayout();
 				// If you change that to layout the layout will be correct
-				parent.requestLayout();
-				parent.getParent().requestLayout();
+				parent.layout();
 			}
 		};
 

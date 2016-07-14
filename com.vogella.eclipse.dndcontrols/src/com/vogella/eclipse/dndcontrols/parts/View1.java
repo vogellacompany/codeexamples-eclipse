@@ -1,12 +1,10 @@
-package com.vogella.eclipse.dndcontrols;
+package com.vogella.eclipse.dndcontrols.parts;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-
-import com.vogella.eclipse.dndcontrols.parts.View;
 
 public class View1 extends View 
 {
