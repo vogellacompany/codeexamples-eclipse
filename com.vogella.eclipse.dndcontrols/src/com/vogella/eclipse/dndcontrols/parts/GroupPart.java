@@ -11,6 +11,9 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 
+/*
+ * WORK IN PROGESS
+ */
 public class GroupPart extends View{
 
 	
