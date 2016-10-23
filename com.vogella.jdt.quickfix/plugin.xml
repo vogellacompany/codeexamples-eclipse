@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.jdt.ui.quickFixProcessors">
+      <quickFixProcessor
+            class="com.vogella.jdt.quickfix.ProblemIdQuickFixProcessor"
+            id="com.vogella.jdt.quickfix.quickFixProcessor1">
+      </quickFixProcessor>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.ui.quickAssistProcessors">
+      <quickAssistProcessor
+            class="com.vogella.jdt.quickfix.QuickAssistProcessor1"
+            id="com.vogella.jdt.quickfix.quickAssistProcessor1"
+            name="Generate Getter And Setter">
+      </quickAssistProcessor>
+   </extension>
+
+</plugin>
