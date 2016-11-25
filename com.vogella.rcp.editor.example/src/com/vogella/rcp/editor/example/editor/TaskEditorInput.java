@@ -42,7 +42,7 @@ public class TaskEditorInput implements IEditorInput {
 	}
 
 	@Override
-	public Object getAdapter(Class adapter) {
+	public <T> T getAdapter(Class<T> adapter) {
 		return null;
 	}
 
