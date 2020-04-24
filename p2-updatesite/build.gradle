@@ -1,0 +1,43 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	    maven {
+      		url 'http://oss.sonatype.org/content/repositories/snapshots/'
+    	}
+	}
+	dependencies {
+		classpath 'org.standardout:bnd-platform:1.7.0'
+	}
+}
+
+apply plugin: 'org.standardout.bnd-platform'
+repositories {
+	jcenter()
+	mavenCentral()
+	maven {
+      		url 'https://art.swirlds.com/artifactory/swirlds/'
+    	}
+		
+}
+
+platform {
+
+	// configure proper names for the p2 update site
+	categoryId = 'retrofit'
+	categoryName = 'retrofit'
+
+	featureId = 'retrofit'
+	featureName = 'retrofit osgi'
+	featureVersion = '2.1.0'
+	featureProvider = 'Simon Scholz'
+
+	defaultQualifier = ''
+	useBndHashQualifiers = false
+	useFeatureHashQualifiers = false
+	defaultQualifierMap.prefix = ''
+
+
+	bundle('com.goterl.lazycode:lazysodium-java:4.2.6')
+
+	// You can add other converters similar to the gson converter above...
+}
