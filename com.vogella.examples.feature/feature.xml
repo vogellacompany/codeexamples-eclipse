@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="com.vogella.examples.feature"
+         label="vogella Eclipse Code Examples"
+         version="1.0.0.qualifier"
+         provider-name="vogella GmbH">
+
+   <description>
+      Example plug-ins and RCP applications from vogella.com showing Eclipse 4 application, JFace, SWT, JDT and data binding APIs.
+   </description>
+
+   <copyright>
+      Copyright (c) vogella GmbH and others.
+   </copyright>
+
+   <license url="https://www.eclipse.org/legal/epl-v10.html">
+      This program and the accompanying materials are made available under the terms of the Eclipse Public License 1.0 which is available at https://www.eclipse.org/legal/epl-v10.html (see also the LICENSE file in the source repository).
+   </license>
+
+   <plugin id="com.vogella.css.fonts" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.e4.model.persistence" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.eclipse.dndcontrols" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.eclipse.e4.coreexpression" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.jdt.quickfix" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.jface.viewer" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.plugin.markers" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.databinding" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.editor.example" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.jface.translation" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.perspective.addpart" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.perspective.plugin" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.swt.fonts.roboto" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.swt.widgets" version="0.0.0" unpack="false"/>
+   <plugin id="org.eclipse.jface.nl1" version="0.0.0" fragment="true" unpack="false"/>
+
+</feature>

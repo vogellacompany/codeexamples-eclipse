@@ -1,14 +1,14 @@
 package com.vogella.rcp.databinding.parts;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.BeanProperties;
+import org.eclipse.core.databinding.beans.typed.BeanProperties;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.validation.ValidationStatus;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.layout.GridDataFactory;
 import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.swt.SWT;
@@ -39,19 +39,20 @@ public class SamplePart {
 		DataBindingContext dbc = new DataBindingContext();
 
 		// define converters
-		IConverter convertToStringArray = IConverter.create(String.class, String[].class,
-				(o1) -> ((String) o1).split(","));
-		IConverter convertToString = IConverter.create(String[].class, String.class, (o1) -> convert((String[]) o1));
+		IConverter<String, String[]> convertToStringArray = IConverter.create(String.class, String[].class,
+				(o1) -> o1.split(","));
+		IConverter<String[], String> convertToString = IConverter.create(String[].class, String.class, (o1) -> convert(o1));
 		;
 
 		// create the observables, which should be bound
-		IObservableValue<Text> programmingSkillsTarget = WidgetProperties.text(SWT.Modify)
+		IObservableValue<String> programmingSkillsTarget = WidgetProperties.text(SWT.Modify)
 				.observe(programmingSkillsText);
-		IObservableValue<Person> programmingSkillsModel = BeanProperties.value("programmingSkills").observe(person);
+		IObservableValue<String[]> programmingSkillsModel = BeanProperties.value(Person.class, "programmingSkills", String[].class)
+				.observe(person);
 
-		UpdateValueStrategy updateStrategy = UpdateValueStrategy.create(convertToStringArray);
+		UpdateValueStrategy<String, String[]> updateStrategy = UpdateValueStrategy.create(convertToStringArray);
 		updateStrategy.setAfterGetValidator((o1) -> {
-			String s = (String) o1;
+			String s = o1;
 			if (!s.contains("Perl")) {
 				return ValidationStatus.ok();
 			}

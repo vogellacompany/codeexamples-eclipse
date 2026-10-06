@@ -1,6 +1,6 @@
 package com.vogella.eclipse.dndcontrols.parts;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.jface.util.LocalSelectionTransfer;

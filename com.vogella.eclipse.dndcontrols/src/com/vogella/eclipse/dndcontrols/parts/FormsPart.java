@@ -2,7 +2,7 @@ package com.vogella.eclipse.dndcontrols.parts;
 
 import java.util.Arrays;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ColumnLabelProvider;

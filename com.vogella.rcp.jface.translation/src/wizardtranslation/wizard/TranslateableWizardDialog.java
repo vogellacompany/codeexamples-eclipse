@@ -1,6 +1,6 @@
 package wizardtranslation.wizard;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.wizard.IWizard;

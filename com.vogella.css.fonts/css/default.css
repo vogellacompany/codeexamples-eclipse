@@ -1,0 +1,46 @@
+/* Edit this style sheet in the app and press Apply (Ctrl+Enter). */
+
+/* Families, combined with a weight class on the same label. On Windows the extra
+   weights are separate families such as "Segoe UI Semibold" or "Bahnschrift Light". */
+.bahnschrift { font-family: 'Bahnschrift'; }
+.calibri { font-family: 'Calibri'; }
+
+/* font-weight: numbers, keywords and face names */
+.w100 { font-weight: 100; }
+.w200 { font-weight: 200; }
+.w300 { font-weight: 300; }
+.w400 { font-weight: 400; }
+.w500 { font-weight: 500; }
+.w600 { font-weight: 600; }
+.w700 { font-weight: 700; }
+.w800 { font-weight: 800; }
+.w900 { font-weight: 900; }
+.w-normal { font-weight: normal; }
+.w-bold { font-weight: bold; }
+.w-bolder { font-weight: bolder; }
+.w-lighter { font-weight: lighter; }
+.w-semibold { font-weight: semi-bold; }
+.w-medium { font-weight: medium; }
+.w-light { font-weight: light; }
+
+/* font-size: units and relative values */
+.s-unitless { font-size: 14; }
+.s-pt { font-size: 14pt; }
+.s-px { font-size: 16px; }
+.s-em { font-size: 1.5em; }
+.s-pct { font-size: 75%; }
+.s-larger { font-size: larger; }
+.s-smaller { font-size: smaller; }
+
+/* font shorthand */
+.sh-weight { font: 600 14pt 'Bahnschrift'; }
+.sh-italic { font: italic bold 12 'Calibri'; }
+.sh-relative { font: 'Bahnschrift' larger; }
+.sh-legacy { font: 12 'Calibri'; }
+
+/* Hierarchy example: heading, subheading, body, caption */
+.h1 { font-size: 2em; font-weight: 700; }
+.h2 { font-size: 1.4em; font-weight: 600; }
+.h3 { font-size: 1.15em; font-weight: 500; }
+.body { font-weight: 400; }
+.caption { font-size: 85%; font-weight: 300; }

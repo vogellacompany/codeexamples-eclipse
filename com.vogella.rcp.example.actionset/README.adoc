@@ -1,2 +1,0 @@
-== Example for the deprecated ActionSet extension point
-

@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.vogella.rcp.perspective.addpart;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: VOGELLA
 Require-Bundle: org.eclipse.e4.ui.model.workbench,
- javax.annotation,
- javax.inject,
  org.eclipse.swt
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-25
+Import-Package: jakarta.inject;version="[2.0.0,3.0.0)",
+ jakarta.annotation;version="[2.1.0,4.0.0)"

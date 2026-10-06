@@ -1,8 +1,8 @@
  
 package com.vogella.rcp.perspective.addpart.parts;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.inject.Inject;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;

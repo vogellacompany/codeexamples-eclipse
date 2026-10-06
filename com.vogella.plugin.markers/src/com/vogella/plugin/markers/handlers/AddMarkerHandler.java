@@ -1,6 +1,6 @@
 package com.vogella.plugin.markers.handlers;
 
-import javax.inject.Named;
+import jakarta.inject.Named;
 
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
