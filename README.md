@@ -7,7 +7,7 @@ The bundles are built with Tycho (pomless) against the Eclipse 2026-09 release a
 
 | Project | Shows |
 | --- | --- |
-| com.vogella.css.fonts | Live CSS editor showing font-weight, font-size and face resolution, intended for Windows |
+| com.vogella.css.fonts | Live CSS editor showing font-weight, font-size and face resolution with the bundled Inter font (OFL), intended for Windows; start it from `css-fonts.product` |
 | com.vogella.e4.model.persistence | Persisting and restoring the Eclipse 4 application model |
 | com.vogella.eclipse.dndcontrols | Drag and drop of controls with SWT and Forms in an E4 part |
 | com.vogella.eclipse.e4.coreexpression | Core expressions in an E4 application |

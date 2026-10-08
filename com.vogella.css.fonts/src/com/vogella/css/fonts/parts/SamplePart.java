@@ -79,10 +79,10 @@ public class SamplePart {
 		Composite content = new Composite(scroll, SWT.NONE);
 		content.setLayout(new GridLayout(2, false));
 
-		String[] families = { "", "bahnschrift", "calibri" };
-		String[] familyTitles = { "inherited family (Segoe UI)", "Bahnschrift", "Calibri" };
+		String[] families = { "", "bahnschrift", "calibri", "inter" };
+		String[] familyTitles = { "inherited family (Segoe UI)", "Bahnschrift", "Calibri", "Inter" };
 
-		Group weights = group(content, "font-weight", 4);
+		Group weights = group(content, "font-weight", 5);
 		weights.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 3));
 		header(weights, "rule", familyTitles);
 		for (String cls : new String[] { "w100", "w200", "w300", "w400", "w500", "w600", "w700", "w800", "w900",

@@ -4,6 +4,9 @@
    weights are separate families such as "Segoe UI Semibold" or "Bahnschrift Light". */
 .bahnschrift { font-family: 'Bahnschrift'; }
 .calibri { font-family: 'Calibri'; }
+/* Inter (rsms.me/inter, OFL) ships in fonts/ and is loaded at startup. Windows names the
+   variable font 'Inter Variable Text' and lists each weight as its own family. */
+.inter { font-family: 'Inter Variable Text'; }
 
 /* font-weight: numbers, keywords and face names */
 .w100 { font-weight: 100; }

@@ -9,6 +9,10 @@
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
             name="com.vogella.css.fonts">
          <property
+               name="lifeCycleURI"
+               value="bundleclass://com.vogella.css.fonts/com.vogella.css.fonts.LifeCycle">
+         </property>
+         <property
                name="applicationCSS"
                value="platform:/plugin/com.vogella.css.fonts/css/default.css">
          </property>
