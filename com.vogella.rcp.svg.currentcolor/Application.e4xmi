@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_svgcc_app" elementId="com.vogella.rcp.svg.currentcolor.application" bindingContexts="_svgcc_ctx_dialogAndWindow">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_svgcc_window" elementId="com.vogella.rcp.svg.currentcolor.window.main" label="SVG currentColor" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/home.svg" width="700" height="500">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_svgcc_sash" elementId="com.vogella.rcp.svg.currentcolor.partsashcontainer.main">
+      <children xsi:type="basic:PartStack" xmi:id="_svgcc_stack" elementId="com.vogella.rcp.svg.currentcolor.partstack.main">
+        <children xsi:type="basic:Part" xmi:id="_svgcc_part_icons" elementId="com.vogella.rcp.svg.currentcolor.part.icons" contributionURI="bundleclass://com.vogella.rcp.svg.currentcolor/com.vogella.rcp.svg.currentcolor.parts.IconsPart" label="Icons" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/star.svg"/>
+        <children xsi:type="basic:Part" xmi:id="_svgcc_part_info" elementId="com.vogella.rcp.svg.currentcolor.part.info" contributionURI="bundleclass://com.vogella.rcp.svg.currentcolor/com.vogella.rcp.svg.currentcolor.parts.InfoPart" label="How it works" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/info.svg"/>
+      </children>
+    </children>
+    <mainMenu xmi:id="_svgcc_menu" elementId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_svgcc_menu_file" elementId="file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_svgcc_menu_quit" elementId="com.vogella.rcp.svg.currentcolor.handleditem.quit" label="Quit" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/exit.svg" command="_svgcc_cmd_quit"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_svgcc_menu_help" elementId="help" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_svgcc_menu_about" elementId="com.vogella.rcp.svg.currentcolor.handleditem.about" label="About" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/info.svg" command="_svgcc_cmd_about"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_svgcc_trimbar" elementId="com.vogella.rcp.svg.currentcolor.trimbar.top">
+      <children xsi:type="menu:ToolBar" xmi:id="_svgcc_toolbar" elementId="org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_svgcc_tool_about" elementId="com.vogella.rcp.svg.currentcolor.handleditem.trimbar.top.about" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/info.svg" tooltip="About" command="_svgcc_cmd_about"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_svgcc_tool_quit" elementId="com.vogella.rcp.svg.currentcolor.handleditem.trimbar.top.quit" iconURI="platform:/plugin/com.vogella.rcp.svg.currentcolor/icons/exit.svg" tooltip="Quit" command="_svgcc_cmd_quit"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_svgcc_handler_quit" elementId="com.vogella.rcp.svg.currentcolor.handler.quitCommand" contributionURI="bundleclass://com.vogella.rcp.svg.currentcolor/com.vogella.rcp.svg.currentcolor.handlers.QuitHandler" command="_svgcc_cmd_quit"/>
+  <handlers xmi:id="_svgcc_handler_about" elementId="com.vogella.rcp.svg.currentcolor.handler.aboutCommand" contributionURI="bundleclass://com.vogella.rcp.svg.currentcolor/com.vogella.rcp.svg.currentcolor.handlers.AboutHandler" command="_svgcc_cmd_about"/>
+  <bindingTables xmi:id="_svgcc_bindingtable" elementId="com.vogella.rcp.svg.currentcolor.bindingtable" bindingContext="_svgcc_ctx_dialogAndWindow">
+    <bindings xmi:id="_svgcc_binding_quit" elementId="com.vogella.rcp.svg.currentcolor.keybinding.m1q" keySequence="M1+Q" command="_svgcc_cmd_quit"/>
+  </bindingTables>
+  <rootContext xmi:id="_svgcc_ctx_dialogAndWindow" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_svgcc_ctx_window" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_svgcc_ctx_dialog" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_svgcc_cmd_quit" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_svgcc_cmd_about" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_svgcc_addon_commands" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_svgcc_addon_contexts" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_svgcc_addon_bindings" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_svgcc_addon_commandmodel" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_svgcc_addon_handlermodel" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_svgcc_addon_contextmodel" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_svgcc_addon_bindingmodel" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
