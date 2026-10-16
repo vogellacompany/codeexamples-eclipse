@@ -29,6 +29,7 @@
     <module>com.vogella.rcp.jface.translation</module>
     <module>com.vogella.rcp.perspective.addpart</module>
     <module>com.vogella.rcp.perspective.plugin</module>
+    <module>com.vogella.rcp.svg.currentcolor</module>
     <module>com.vogella.swt.fonts.roboto</module>
     <module>com.vogella.swt.widgets</module>
     <module>org.eclipse.jface.nl1</module>

@@ -28,6 +28,7 @@
    <plugin id="com.vogella.rcp.jface.translation" version="0.0.0" unpack="false"/>
    <plugin id="com.vogella.rcp.perspective.addpart" version="0.0.0" unpack="false"/>
    <plugin id="com.vogella.rcp.perspective.plugin" version="0.0.0" unpack="false"/>
+   <plugin id="com.vogella.rcp.svg.currentcolor" version="0.0.0" unpack="false"/>
    <plugin id="com.vogella.swt.fonts.roboto" version="0.0.0" unpack="false"/>
    <plugin id="com.vogella.swt.widgets" version="0.0.0" unpack="false"/>
    <plugin id="org.eclipse.jface.nl1" version="0.0.0" fragment="true" unpack="false"/>

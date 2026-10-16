@@ -1,7 +1,8 @@
 # vogella Eclipse code examples
 
 Example projects for Eclipse RCP and plug-in development from the [vogella.com](https://www.vogella.com) website.
-The bundles are built with Tycho (pomless) against the Eclipse 2026-09 release and published as one p2 update site.
+The bundles are built with Tycho (pomless) against the Eclipse 4.42 integration builds and published as one p2 update site.
+The integration builds are needed for the SWT API used by `com.vogella.rcp.svg.currentcolor`; the target moves to the 2026-12 release once it is available.
 
 ## Examples
 
@@ -19,6 +20,7 @@ The bundles are built with Tycho (pomless) against the Eclipse 2026-09 release a
 | com.vogella.rcp.jface.translation | Translating JFace wizards at runtime |
 | com.vogella.rcp.perspective.addpart | Adding a part to a perspective with a model fragment |
 | com.vogella.rcp.perspective.plugin | Contributing a perspective from a plug-in |
+| com.vogella.rcp.svg.currentcolor | Setting the `currentColor` of SVG icons with `SVGFileFormat.setCurrentColor` from a `-currentColor` program argument or a login dialog; start it from `svg-currentcolor.product` |
 | com.vogella.swt.fonts.roboto | Loading a custom font (Roboto) in SWT |
 | com.vogella.swt.widgets | Custom SWT widgets |
 | org.eclipse.jface.nl1 | Fragment with JFace translations |

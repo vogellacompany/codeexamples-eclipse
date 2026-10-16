@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.e4.ui.workbench.swt.E4Application"
+            name="SVG currentColor">
+         <property
+               name="lifeCycleURI"
+               value="bundleclass://com.vogella.rcp.svg.currentcolor/com.vogella.rcp.svg.currentcolor.LifeCycle">
+         </property>
+         <property
+               name="clearPersistedState"
+               value="true">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
